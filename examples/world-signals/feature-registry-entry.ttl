@@ -1,0 +1,19 @@
+@prefix ex: <https://examples.socioprophet.org/gaia/> .
+@prefix gaia: <https://schemas.socioprophet.org/gaia/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:weather_15min_feature
+    a gaia:WeatherFeature, gaia:FeatureRegistryEntry, gaia:WorldSignal ;
+    gaia:hasFeatureId "gaia.weather.15_minute_forecast" ;
+    gaia:hasPromotionState gaia:ReviewRequired .
+
+ex:energy_ledger_low_margin
+    a gaia:EnergyLedgerEntry ;
+    gaia:hasMarginDelta 0.0 ;
+    gaia:hasPerturbationFlipRate 0.2 ;
+    gaia:hasPromotionState gaia:ReviewRequired .
+
+ex:feature_promotion_decision
+    a gaia:PromotionDecision ;
+    gaia:hasPolicyId "decision-world-signal-policy@0.1.0" ;
+    gaia:promotesSignal ex:weather_15min_feature .
