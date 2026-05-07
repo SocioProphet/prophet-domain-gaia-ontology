@@ -46,6 +46,60 @@ gaia:EnergyLedgerEntryShape
         sh:maxCount 1 ;
     ] .
 
+gaia:ConcordanceLinkShape
+    a sh:NodeShape ;
+    sh:targetClass gaia:ConcordanceLink ;
+    sh:property [
+        sh:path gaia:hasSourceRecordId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path gaia:mapsSourceRecordToEntity ;
+        sh:class gaia:CanonicalEntity ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path gaia:hasDecisionLedgerEntry ;
+        sh:class gaia:DecisionLedgerEntry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+gaia:DecisionLedgerEntryShape
+    a sh:NodeShape ;
+    sh:targetClass gaia:DecisionLedgerEntry ;
+    sh:property [
+        sh:path gaia:hasDecisionId ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path gaia:hasDecisionType ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+gaia:ProofArtifactShape
+    a sh:NodeShape ;
+    sh:targetClass gaia:ProofArtifact ;
+    sh:property [
+        sh:path gaia:hasClaimName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path gaia:hasResultStatus ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
 gaia:PromotionDecisionShape
     a sh:NodeShape ;
     sh:targetClass gaia:PromotionDecision ;
