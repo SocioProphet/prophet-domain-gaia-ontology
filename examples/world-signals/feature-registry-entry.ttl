@@ -17,3 +17,20 @@ ex:feature_promotion_decision
     a gaia:PromotionDecision ;
     gaia:hasPolicyId "decision-world-signal-policy@0.1.0" ;
     gaia:promotesSignal ex:weather_15min_feature .
+
+ex:concordance_link_example
+    a gaia:ConcordanceLink ;
+    gaia:hasSourceRecordId "crm:C1055598" ;
+    gaia:mapsSourceRecordToEntity ex:weather_15min_feature ;
+    gaia:hasDecisionLedgerEntry ex:feature_promotion_decision .
+
+ex:decision_ledger_entry_example
+    a gaia:DecisionLedgerEntry ;
+    gaia:hasDecisionId "did:feature-promotion-0001" ;
+    gaia:hasDecisionType "FEATURE_PROMOTION" ;
+    gaia:hasPromotionState gaia:ReviewRequired .
+
+ex:proof_artifact_example
+    a gaia:ProofArtifact ;
+    gaia:hasClaimName "no_escape" ;
+    gaia:hasResultStatus "PROVED" .
