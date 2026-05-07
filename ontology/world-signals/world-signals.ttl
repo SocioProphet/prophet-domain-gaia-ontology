@@ -76,7 +76,6 @@ gaia:hasFeatureId a owl:DatatypeProperty ;
     rdfs:label "has feature id" .
 
 gaia:hasPolicyId a owl:DatatypeProperty ;
-    rdfs:domain gaia:PromotionDecision ;
     rdfs:range xsd:string ;
     rdfs:label "has policy id" .
 
@@ -93,6 +92,31 @@ gaia:hasPerturbationFlipRate a owl:DatatypeProperty ;
     rdfs:domain gaia:EnergyLedgerEntry ;
     rdfs:range xsd:decimal ;
     rdfs:label "has perturbation flip rate" .
+
+gaia:hasDecisionId a owl:DatatypeProperty ;
+    rdfs:domain gaia:DecisionLedgerEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "has decision id" .
+
+gaia:hasDecisionType a owl:DatatypeProperty ;
+    rdfs:domain gaia:DecisionLedgerEntry ;
+    rdfs:range xsd:string ;
+    rdfs:label "has decision type" .
+
+gaia:hasClaimName a owl:DatatypeProperty ;
+    rdfs:domain gaia:ProofArtifact ;
+    rdfs:range xsd:string ;
+    rdfs:label "has claim name" .
+
+gaia:hasResultStatus a owl:DatatypeProperty ;
+    rdfs:domain gaia:ProofArtifact ;
+    rdfs:range xsd:string ;
+    rdfs:label "has result status" .
+
+gaia:hasSourceRecordId a owl:DatatypeProperty ;
+    rdfs:domain gaia:ConcordanceLink ;
+    rdfs:range xsd:string ;
+    rdfs:label "has source record id" .
 
 gaia:hasPromotionState a owl:ObjectProperty ;
     rdfs:range gaia:PromotionState ;
